@@ -7,9 +7,18 @@ class Base_datos:
         print("botella guardada exitosamente")
     
     def eliminar_botella(self, posicion):
-        if 0 <= posicion<len(self.lista_botella):
-            self.lista_botella.pop(posicion)
-        else:
-            print("posicion no encontrada")
+        for i in range(len(self.lista_botella)):
+            if i == posicion:
+                self.lista_botella.pop(posicion)
+                print("botella en posicion {i} eliminado")
+            else:
+                print("posicion no encontrada")
 
+    def modificar_botella(self, posicion, nuevo_material, nueva_capacidad, nueva_forma):
+        for i in range(len(self.lista_botella)):
+            if i == posicion:
+                self.lista_botella[i].set_datos(nuevo_material, nueva_capacidad, nueva_forma)
+                print("posicion {i} actualizacda")
+            else:
+                print("posicion para modificar no existe")
     
