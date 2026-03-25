@@ -4,14 +4,22 @@ from base_datos import Base_datos
 
 obj_base_datos = Base_datos()
 
-material = input("material inicial: ")
-capacidad = input("capacidad inicial: ")
-forma = input("forma de la botella: ")
+while True:
+    print("----- MENU DE OPCIONES ---- ")
+    print("1. guardar una nueva botella de plastica")
+    print("2. guardar una nueva botella de vidrio")
+    print("3. mostrar listas de botellas")
+    print("4. eliminar una posicion de botella")
+    print("5. salir del menu")
 
-if material == "plastica":
-    obj_botella = Botella_plastica(material, capacidad, forma)
-else:
-    obj_botella= Botella_vidrio(material, capacidad, forma)
+    opcion = input("selecciona una opcion")
 
-obj_base_datos.agregar_botella(obj_botella)
-print(obj_botella.ver_info()) 
+    if opcion == "1":
+        material = input("ingrese el material: ")
+        capacidad = input("ingrese la cantidad: ")
+        forma = input("ingrese la forma: ")
+
+        obj_botella = Botella_plastica(material, capacidad, forma)
+        obj_base_datos.agregar_botella(obj_botella)
+
+    

@@ -5,9 +5,13 @@ class Botella:
 
     def get_material(self):
         return self.material
+    
+    def get_capacidad(self):
+        return self.capacidad
 
     def set_datos(self, nuevo_material, nueva_capacidad):
-        pass
+        self.material = nuevo_material
+        self.capacidad = nueva_capacidad
 
     def ver_info(self):
-        pass
+        pass 

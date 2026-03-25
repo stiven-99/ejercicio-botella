@@ -5,9 +5,7 @@ class Botella_vidrio(Botella):
         super().__init__(material, capacidad)
         self.forma = forma
 
-    def set_datos(self, nuevo_material, nueva_capacidad, nueva_forma):
-        self.material = nuevo_material
-        self.capacidad = nueva_capacidad
+    def set_datos(self, nueva_forma):
         self.forma = nueva_forma
         
     def ver_info(self):
