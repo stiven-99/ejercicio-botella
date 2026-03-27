@@ -13,7 +13,7 @@ while True:
     print("5. eliminar una posicion de botella")
     print("6. salir del menu")
 
-    opcion = input("selecciona una opcion")
+    opcion = input("selecciona una opcion: ")
 
     if opcion == "1":
         material = input("ingrese el material: ")

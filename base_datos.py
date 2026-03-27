@@ -10,7 +10,8 @@ class Base_datos:
         for i in range(len(self.lista_botella)):
             if i == posicion:
                 self.lista_botella.pop(posicion)
-                print("botella en posicion {i} eliminado")
+                print(f"botella en posicion {i} eliminado")
+                break
             else:
                 print("posicion no encontrada")
 
@@ -18,7 +19,8 @@ class Base_datos:
         for i in range(len(self.lista_botella)):
             if i == posicion:
                 self.lista_botella[i].set_datos(nuevo_material, nueva_capacidad, nueva_forma)
-                print("posicion {i} actualizacda")
+                print(f"posicion {i} actualizacda")
+                break
             else:
                 print("posicion para modificar no existe")
     
